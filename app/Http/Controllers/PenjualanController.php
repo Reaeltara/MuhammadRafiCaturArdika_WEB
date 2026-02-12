@@ -10,7 +10,7 @@ class PenjualanController extends Controller
 {
     public function index()
     {
-        $penjualans = Penjualan::with('pelanggan')->orderByDesc('faktur')->get();
+        $penjualans = Penjualan::with('pelanggan')->orderBy('faktur', 'asc')->get();
         return view('penjualan.index', compact('penjualans'));
     }
 

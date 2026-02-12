@@ -9,7 +9,7 @@ class BarangController extends Controller
 {
     public function index()
     {
-        $barangs = Barang::orderByDesc('kode_barang')->get();
+        $barangs = Barang::orderBy('kode_barang', 'asc')->get();
         return view('barang.index', compact('barangs'));
     }
 

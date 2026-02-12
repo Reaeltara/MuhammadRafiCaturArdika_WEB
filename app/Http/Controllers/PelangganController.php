@@ -9,7 +9,7 @@ class PelangganController extends Controller
 {
     public function index()
     {
-        $pelanggans = Pelanggan::orderByDesc('no_pelanggan')->get();
+        $pelanggans = Pelanggan::orderBy('no_pelanggan', 'asc')->get();
         return view('pelanggan.index', compact('pelanggans'));
     }
 
